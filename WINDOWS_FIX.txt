@@ -1,0 +1,14 @@
+SINGLE DOCTOR APP — WINDOWS FIX
+
+The error ERR_DLOPEN_FAILED is occurring while loading the native libSQL module on Node.js v26.10.0. This project uses a local libSQL database by default. Use Node.js 22 LTS (64-bit) for this package set.
+
+1) Install Node.js 22 LTS x64 from the official Node.js website.
+2) Close all terminals, open a new PowerShell window.
+3) cd to this extracted folder, e.g. cd D:\myAllApp\single-doctor-app
+4) Verify: node -v  (should start with v22.)
+5) Clean dependencies: Remove-Item -Recurse -Force node_modules -ErrorAction SilentlyContinue
+6) Install: npm install
+7) Start: npm start
+8) Open http://localhost:10000
+
+Do not delete package-lock.json if one is included. If the error persists, share the FIRST error line above the stack trace and output of: npm ls libsql @libsql/client
